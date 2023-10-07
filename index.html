@@ -1,17 +1,17 @@
-<!--script>
+<script>
     function reloadMe(){
       <!-- window.location.reload("https://adquash.com/postad.php"); -->
       window.location=("https://adquash.com/postad.php");
     }
     function getInterval(){
         var lowerBound = 6;
-        var upperBound = 9;
+        var upperBound = 7;
         var randNum = Math.floor((upperBound-lowerBound+1)*Math.random()+lowerBound)*1000;
         return randNum;
     }
     var Interval = getInterval();
     var srcInterval = setInterval("reloadMe('https://adquash.com/postad.php')",Interval);
-</script -->
+</script>
 <!--body>
     <script type="text/javascript">
         document.write("This page will reload after "+Interval/1000+" second")
