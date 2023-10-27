@@ -1,23 +1,6 @@
-<!--script>
-if (document.referrer && document.referrer != "")
-      document.write('Thanks for visiting this site from ' + document.referrer);
-
-<script -->
-<!--script>
-if (document.referrer != "") {
-   var referringURL = document.referrer;
-   var local = referringURL.substring(referringURL.indexOf("?"), referringURL.length);
-   //location.href = local; 
-   document.write('Thanks for visiting this site from ' + local);
-}
-var url = document.referrer.replace(/^[^:]+:\/\/[^/]+/, '').replace(/#.*/, '')
-document.write('Thanks for visiting this site from ' + url);
-//location.href = "https://www.adquash.com"+url; 
-</script -- >
 <script>
 var current = window.location.pathname; 
 document.write('Thanks for visiting this site from ' + current);
-location.href = "https://adquash.com"+current; 
-
+location.href = "https://www.adquash.com"+current; 
 </script>
 <!--meta http-equiv="refresh" content="0; url=https://adquash.com/" / --> 
