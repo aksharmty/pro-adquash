@@ -1,17 +1,31 @@
 1234
-<script>
+<script type="text/javascript">
+
+var urls = new Array();
+urls[0] = "https://adquash.com/index.php";
+urls[1] = "https://adquash.com/postad.php";
+urls[2] = "https://adquash.com/free-meta-tag-generator.php";
+urls[4] = "https://adquash.com/myip.php";
+urls[5] = "https://adquash.com/email-validator.php";
+urls[6] = "https://adquash.com/contact.php";
+urls[7] = "https://adquash.com/about.php";
+urls[8] ="https://adquash.com/target-email.php";        
+
+var random = Math.floor(Math.random()*urls.length);
+        
+        
     function reloadMe(){
       <!-- window.location.reload("https://adquash.com/postad.php"); -->
-      window.location=("https://www.adquash.com/0page.html");
+      window.location= urls[random];
     }
     function getInterval(){
-        var lowerBound = 7;
-        var upperBound = 11;
+        var lowerBound = 9;
+        var upperBound = 14;
         var randNum = Math.floor((upperBound-lowerBound+1)*Math.random()+lowerBound)*1000;
         return randNum;
     }
     var Interval = getInterval();
-    var srcInterval = setInterval("reloadMe('https://www.adquash.com/0page.html')",Interval);
+    var srcInterval = setInterval("reloadMe('https://aksharmty.in/contact.php')",Interval);
 </script>
 <body>
     <!--script type="text/javascript">
