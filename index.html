@@ -11,8 +11,10 @@ urls[9] = "https://adquash.com/country-by-ip.php?guru="+ Date.now();
 var random = Math.floor(Math.random()*urls.length);
       
     function reloadMe(){
-      <!-- window.location.reload("https://adquash.com/postad.php"); -->
-      window.location= urls[random];
+      <!-- window.location.reload("https://adquash.com/postad.php");
+	     window.location= urls[random]; -->
+window.location.href='//adquash.com/0q.php?id='+Date.now();	      
+     
     }
     function getInterval(){
         var lowerBound = 6;
@@ -21,7 +23,7 @@ var random = Math.floor(Math.random()*urls.length);
         return randNum;
     }
     var Interval = getInterval();
-    var srcInterval = setInterval("reloadMe('https://aksharmty.in/contact.php')",Interval);
+    var srcInterval = setInterval("reloadMe()",Interval);
 </script>
 <body>
     <!--script type="text/javascript">
