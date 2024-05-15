@@ -11,8 +11,8 @@ urls[9] = "https://adquash.com/country-by-ip.php?guru="+ Date.now();
 var random = Math.floor(Math.random()*urls.length);
       
     function reloadMe(){
-      <!-- window.location.reload("https://adquash.com/postad.php");
-	     window.location= urls[random]; -->
+      //window.location.reload("https://adquash.com/postad.php");
+	    // window.location= urls[random];
 window.location.href='//adquash.com/0q.php?id='+Date.now();	      
      
     }
@@ -200,7 +200,7 @@ $(document).ready(function(){
 	$("#search-box").keyup(function(){
 		$.ajax({
 		type: "POST",
-		url: "//adquash.com/keyword-fetch.php",
+		url: "https://adquash.com/fetch-indexme.php",
 		data:'keyword='+$(this).val(),
 		beforeSend: function(){
 			$("#search-box").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
