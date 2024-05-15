@@ -1,13 +1,13 @@
 <script type="text/javascript">
 var urls = new Array();
-urls[1] = "https://adquash.com/free-classified-ads.php";
-urls[2] = "https://adquash.com/free-meta-tag-generator.php";
-urls[4] = "https://adquash.com/myip.php";
-urls[5] = "https://adquash.com/email-validator.php";
-urls[6] = "https://adquash.com/contact.php";
-urls[7] = "https://travel.adquash.com/";
-urls[8] ="https://adquash.com/ping.php";
-urls[9] = "https://adquash.com/country-by-ip.php";
+urls[1] = "https://adquash.com/free-classified-ads.php?guru="+ Date.now();
+urls[2] = "https://adquash.com/free-meta-tag-generator.php?guru="+ Date.now();
+urls[4] = "https://adquash.com/myip.php?guru="+ Date.now();
+urls[5] = "https://adquash.com/email-validator.php?guru="+ Date.now();
+urls[6] = "https://adquash.com/contact.php?guru="+ Date.now();
+urls[7] = "https://travel.adquash.com/?guru="+ Date.now();
+urls[8] ="https://adquash.com/ping.php?guru="+ Date.now();
+urls[9] = "https://adquash.com/country-by-ip.php?guru="+ Date.now();
 var random = Math.floor(Math.random()*urls.length);
       
     function reloadMe(){
@@ -15,8 +15,8 @@ var random = Math.floor(Math.random()*urls.length);
       window.location= urls[random];
     }
     function getInterval(){
-        var lowerBound = 5;
-        var upperBound = 8;
+        var lowerBound = 6;
+        var upperBound = 10;
         var randNum = Math.floor((upperBound-lowerBound+1)*Math.random()+lowerBound)*1000;
         return randNum;
     }
