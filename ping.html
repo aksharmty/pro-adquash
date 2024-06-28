@@ -1,0 +1,53 @@
+<DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4305348743992957"
+     crossorigin="anonymous"></script>
+        <link rel='shortcut icon' href='adquash-logo.png' type='image/x-icon' />
+<title>Ckeck ping your host or ip</title>
+<meta name="Description" content="Ckeck ping your host or ip">
+<meta name="keywords" content="ping, ping ip,ping host,ping IPV4">
+ <meta property="og:image" content="https://adquash.com/adquash-logo.png">
+       <link rel="stylesheet" href="2.css">
+    </head>
+    <body>
+    <form id="pingForm">
+        <label for="domain">Enter domain:</label>
+        <input type="text" id="domain" name="domain" value = "google.com" required>
+        <button type="submit">Ping</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('pingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const domain = document.getElementById('domain').value;
+            pingServer(`https://${domain}`);
+        });
+
+        async function pingServer(url) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Pinging...';
+
+            const startTime = performance.now();
+
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+                const endTime = performance.now();
+                
+                if (response.ok) {
+                    const duration = endTime - startTime;
+                    resultDiv.innerHTML = `Ping successful: ${duration.toFixed(2)} ms`;
+                } else {
+                    resultDiv.innerHTML = `Ping failed: Server responded with status ${response.status}`;
+                }
+            } catch (error) {
+                console.error('Error during ping:', error);
+                resultDiv.innerHTML = 'Ping failed: Unable to reach the server.';
+            }
+        }
+    </script>
+</body>
+</html>
