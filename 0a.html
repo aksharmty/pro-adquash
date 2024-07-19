@@ -1,0 +1,25 @@
+<script type="text/javascript">
+var urls = new Array();
+urls[1] = "https://adquash.com/0ga.php?q=akshar-mantra-tantra-yantra.in#gsc.tab=0&gsc.q=akshar-mantra-tantra-yantra.in&gsc.sort=&gsc.page=1";
+urls[2] = "https://adquash.com/0ga.php?q=-mantra#gsc.tab=0&gsc.q=mantra&gsc.sort=&gsc.page=1";
+urls[4] = "https://adquash.com/0ga.php?q=tantrik#gsc.tab=0&gsc.q=tantrik&gsc.sort=&gsc.page=1";
+urls[5] = "https://adquash.com/0ga.php?q=yantra#gsc.tab=0&gsc.q=yantra&gsc.sort=&gsc.page=1";
+urls[6] = "https://adquash.com/0ga.php?q=akshar mantra tantra yantra#gsc.tab=0&gsc.q=akshar mantra tantra yantra&gsc.sort=&gsc.page=1";
+urls[7] = "https://adquash.com/0ga.php?q=mantra jaap mala#gsc.tab=0&gsc.q=mantra jaap mala&gsc.sort=&gsc.page=1";
+urls[8] ="https://adquash.com/0ga.php?q=jaap mala#gsc.tab=0&gsc.q=jaap mala&gsc.sort=&gsc.page=1";
+urls[9] = "https://adquash.com/0ga.php?q=sphatik mala#gsc.tab=0&gsc.q=sphatik mala&gsc.sort=&gsc.page=1";
+var random = Math.floor(Math.random()*urls.length);
+      
+    function reloadMe(){
+      //window.location.reload("https://adquash.com/postad.php");
+	    window.location= urls[random];
+    }
+    function getInterval(){
+        var lowerBound = 2;
+        var upperBound = 3;
+        var randNum = Math.floor((upperBound-lowerBound+1)*Math.random()+lowerBound)*1000;
+        return randNum;
+    }
+    var Interval = getInterval();
+    var srcInterval = setInterval("reloadMe()",Interval);
+</script>
