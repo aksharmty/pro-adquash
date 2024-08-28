@@ -1,5 +1,43 @@
 <script type='text/javascript' src='//pl20998408.highrevenuenetwork.com/1c/85/d3/1c85d35967a84aaba867ae5b2b39aa38.js'></script>
-<script type="text/javascript">
+<script>// List of URLs to choose from
+const urls = [
+"https://simplephpcoding.blogspot.com",
+"https://adquash.com/0q.php?id="+Date.now(),
+"https://akshar-mantra-tantra-yantra.in",
+"https://sakhihosting.in/ads.php"
+];
+
+// Function to get a random URL from the list
+function getRandomURL() {
+    const randomIndex = Math.floor(Math.random() * urls.length);
+    return urls[randomIndex];
+}
+
+// Function to open a new window/tab with the given URL
+function openRandomPage() {
+    const url = getRandomURL();
+    //window.open(url);
+    window.location= url;
+}
+
+// Function to set a random timeout between 8 and 12 seconds and open a page
+function setRandomTimeout() {
+    // Generate a random time between 8 and 12 seconds (8000 ms to 12000 ms)
+    const minTime = 8000; // 8 seconds in milliseconds
+    const maxTime = 12000; // 12 seconds in milliseconds
+    const randomTime = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+    
+    setTimeout(() => {
+        openRandomPage();
+        // Call setRandomTimeout again to continue opening pages
+        setRandomTimeout();
+    }, randomTime);
+}
+
+// Start the process
+setRandomTimeout();
+</script>
+<!-- script type="text/javascript">
 var urls = new Array();
 urls[1] = "https://adquash.com/free-classified-ads.php?guru="+ Date.now();
 urls[2] = "https://adquash.com/free-meta-tag-generator.php?guru="+ Date.now();
@@ -31,7 +69,7 @@ urls3[3] = "https://sakhihosting.in/ads.php";
     }
     var Interval = getInterval();
     var srcInterval = setInterval("reloadMe()",Interval);
-</script>
+</script -->
 <body>
     <!--script type="text/javascript">
         document.write("This page will reload after "+Interval/1000+" second")
